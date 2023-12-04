@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Cuenta Red Social</title>
+    <author>JorgeSalazarMaceda</author>
+    <link rel="stylesheet" href="ejercicio2.css">
+</head>
+<body>
+    <form action="" method="post" id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required pattern=".{3,20}"> <!-- Entre 3 y 20 letras -->
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" required pattern=".{4,40}"> <!-- Entre 4 y 40 letras -->
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" required pattern=".{7,}"> <!-- Al menos 7 alfanuméricos -->
+
+        <label for="email">Correo electrónico:</label> 
+        <input type="email" id="email" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$" required> <!-- Valida correo electrónico -->
+
+        <label for="telefono">Número de teléfono:</label>
+        <input type="text" id="telefono" required pattern="[0-9]{9}"> <!-- 9 números -->
+
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label> <!-- Mayor de 18 -->
+        <input type="date" id="fecha_nacimiento" required>
+
+        <label>Intereses:</label>
+        <input type="checkbox" name="intereses" id="interes1" value="opcion1">Opción 1
+        <input type="checkbox" name="intereses" id="interes2" value="opcion2">Opción 2
+        <input type="checkbox" name="intereses" id="interes3" value="opcion3">Opción 3
+        <input type="checkbox" name="intereses" id="interes4" value="opcion4">Opción 4
+        <input type="checkbox" name="intereses" id="interes5" value="opcion5">Opción 5
+        
+        <br><label for="fotoPerfil">Foto de perfil:</label>
+        <input type="file"  name="fotoPerfil" id="fotoPerfil" required>
+        <!-- <img id="mostrarImagen" src="" alt=""> -->
+        <div id="mostrarImagen"></div>
+
+        
+        <input type="submit" value="Crear cuenta">
+
+        <section id="mensajeExito" style="display:none;color:green;font-size: large;">
+          <div>
+            ¡¡Cuenta creada con éxito!!
+          </div>
+        </section>
+      </form><br><br>
+
+     
+</body>
+</html>
+
+<script src="ejercicio2.js"></script>

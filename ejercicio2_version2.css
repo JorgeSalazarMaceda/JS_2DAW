@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(86, 86, 98);
+    text-align: center;
+    transition: color 0.5s ease;
+}
+
+  h2:hover {
+    color: rgb(177, 192, 177);
+    animation: shake 0.5s ease-in-out infinite;
+  }
+  @keyframes shake { /*Los keyframes son puntos específicos en el tiempo en los que se define un estado de una animación. En este caso, la animación se llama "shake"*/
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0); /*Transform para mover en eje x*/
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 20px 20px 20px rgb(142, 141, 141);
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="file"] {
+    width: 60%;
+    padding: 6px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button{
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+    width: 40%;
+}
+.hidden{
+    display:none;
+    }
+input[type="submit"] {
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 7px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    width: 40%;
+}
+
+.error {
+    color: red;
+   }
+   input.error {
+     border: solid 2px red !important;
+   }
+   /* input.touch:invalid {
+    border: 2px solid red;
+   } */

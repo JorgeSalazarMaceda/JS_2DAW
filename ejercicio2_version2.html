@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio2_version2.css">
+
+</head>
+<!-- TEORIA -->
+<!-- NOVALIDATE -->
+<!-- Con Novalidate los mensajes por defecto (anula el required y el pattern) del navegador se anulan para personalizarlos -->
+<!-- solo desactiva la validación automática del navegador, pero no permite personalizar los mensajes. -->
+<body>
+  <h2>Versión 2 validación formularios con expresiones regulares (Regex)</h2><br>
+  <form novalidate id="formulario">
+    <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]{3,20}" required>
+        <span class="error" id="msg-nombre"></span><br>
+
+    <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos"  pattern="/^[a-zA-Z]{4,40}$/" required> 
+        <span class="error" id="msg-apellidos"></span><br>
+
+    <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario" pattern="[a-zA-Z]{5}[0-9]{2}" required>
+        <span class="error" id="msg-usuario"></span><br>
+
+  <label for="email">Correo electrónico:</label> 
+        <input type="email" name="email" id="email" pattern="^[a-zA-Z]{5}[0-9]{2}@gmail\.com" required>
+        <span class="error" id="msg-email"></span><br>
+  
+  <label for="telefono">Número de teléfono:</label>
+        <input type="text" name="telefono" id="telefono" pattern="[6-9][0-9]{8}" required>
+        <span class="error" id="msg-telefono"></span><br>
+
+  <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" required>
+        <span class="error" id="msg-fecha_nacimiento"></span><br>
+
+        <!-- <label>Intereses:</label>
+        <input type="checkbox" name="intereses" id="interes1" value="opcion1">Opción 1
+        <input type="checkbox" name="intereses" id="interes2" value="opcion2">Opción 2
+        <input type="checkbox" name="intereses" id="interes3" value="opcion3">Opción 3
+        <input type="checkbox" name="intereses" id="interes4" value="opcion4">Opción 4
+        <input type="checkbox" name="intereses" id="interes5" value="opcion5">Opción 5 
+        
+       <br><label for="fotoPerfil">Foto de perfil:</label>
+        <input type="file"  name="fotoPerfil" id="fotoPerfil" required>
+        <img id="mostrarImagen" src="" alt="">
+        <div id="mostrarImagen"></div> -->
+
+        <section id="validacion" style="display:none;color:green;font-size: large;">
+          <div>
+            ¡¡Todo correcto, puedes crear la cuenta!!
+          </div>
+        </section>
+        
+        <input type="submit" name="enviar" value="Validar Formulario">
+
+        <section id="exito" style="display:none;color:green;font-size: large;" class="hidden">
+          <div>
+            ¡¡Cuenta creada con éxito!!
+          </div>
+      </section>
+        <input id="OK" type="submit" name="enviar" value="Crear Cuenta" class="hidden">
+
+    </form>   
+</body>
+</html>
+<script src="ejercicio2_version2.js"></script>

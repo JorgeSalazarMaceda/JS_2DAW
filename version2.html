@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="version2.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- 2.	Añade al formulario el atributo novalidate ya que ahora los mensajes que se muestren serán 
+personales (no debe mostrar los mensajes por defecto de HTML5). -->
+<!-- Anular la validación de inputs de formularios -->
+<!-- TEORIA -->
+<!-- NOVALIDATE -->
+<!-- Con Novalidate los mensajes por defecto (anula el required y el pattern) del navegador se anulan para personalizarlos -->
+<!-- solo desactiva la validación automática del navegador, pero no permite personalizar los mensajes. -->
+
+    <form id="formulario" novalidate>       
+        <h2>Versión 2 validación formularios Jorge Salazar</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" required  minlength="3" maxlength="20"><br><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" minlength="4" maxlength="40" required><br><br>           
+       
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario" pattern="[a-zA-Z]{5}[0-9]{2}" required><br><br>
+        
+        <label for="email">Correo electrónico:</label> 
+        <input type="email" name="email" id="email" pattern="^[a-zA-Z]{5}[0-9]{2}@gmail\.com" required><br><br>
+    
+        <label for="telefono">Número de teléfono:</label>
+        <input type="text" name="telefono" id="telefono" pattern="[6-9][0-9]{8}" required><br><br> 
+
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="text" name="nacimiento" id="nacimiento" pattern="[0-9]{4}/[0-9]{2}/[0-9]{2}" required><br><br>
+                  
+        <button type="submit" id="boton" onclick="validarFormulario()">Validar Formulario</button>
+        <span class="hidden" id="msg-TodoCorrecto" style="color:green;font-size: large;">¡Todo está correcto!</span><br>
+    </form>
+    
+    <script defer src="version2.js"></script> <!--Defer es para que cuando se ejecute el scrip-->
+</body>
+</html>

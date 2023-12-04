@@ -1,0 +1,105 @@
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: #333333;
+            text-shadow: 2px 2px 2px #cccccc;
+        }
+        
+          h2:hover {
+            color: rgb(177, 192, 177);
+            animation: shake 0.5s ease-in-out infinite;
+          }
+          @keyframes shake { /*Los keyframes son puntos específicos en el tiempo en los que se define un estado de una animación. En este caso, la animación se llama "shake"*/
+            10%, 90% {
+              transform: translate3d(-1px, 0, 0); /*Transform para mover en eje x*/
+            }
+            
+            20%, 80% {
+              transform: translate3d(2px, 0, 0);
+            }
+          
+            30%, 50%, 70% {
+              transform: translate3d(-4px, 0, 0);
+            }
+          
+            40%, 60% {
+              transform: translate3d(4px, 0, 0);
+            }
+        }
+        form {
+            width: 40%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid black;
+            box-shadow: 10px 0px 10px 10px rgb(142, 141, 141);
+            text-align: center;
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;           
+        }
+        input[type="text"],input[type="email"] {
+            width: 60%;
+            padding: 6px 20px;
+            margin: 8px 0;
+            border: 1px solid rgb(165, 164, 164);
+            border-radius: 4px;
+        }
+        /*Crear dos clases una para el input y otra para el span*/
+        .error {
+            color: red;
+        }
+
+        input.error {
+            border: solid 2px red !important;
+          }
+        
+        span{
+            color: black;
+            display: block;
+        }
+               
+        input:focus:invalid {
+            background-color: rgb(252, 156, 156);
+        }
+        
+        input:focus:valid {
+            background-color: rgb(164, 248, 157);
+        }
+
+        #boton {
+            width: 50%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 7px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #boton:hover{
+            background-color: #45a049;
+            width: 70%;
+            height: 5vh;
+        }
+
+        .hidden{ /*Para el mensaje de exito cuando ya se ha realizado la validación*/
+            display:none;
+         }
+        

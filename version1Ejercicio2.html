@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Cuenta Red Social</title>
+    <author>JorgeSalazarMaceda</author>
+    <link rel="stylesheet" href="ejercicio2.css">
+</head>
+<body>
+    <form action="" method="post" id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required pattern=".{3,20}"> <!-- Entre 3 y 20 letras -->
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" title="Debe colocar 8 números, un guión y una letra" required pattern="^\d{8}-[A-Za-z]$"> <!-- DNI -->
+
+        <label for="dni">Espacio en Medio:</label>
+        <input type="text" id="dni" title="Coloca dos NUMEROS separadas" required pattern="[0-9]{4} [0-9]{4}"> <!-- 4 NÚMEROS CON ESPACIO Y 4 NUMEROS -->
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" required pattern=".{4,40}"> <!-- Entre 4 y 40 letras -->
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" required pattern=".{7,}"> <!-- Al menos 7 alfanuméricos -->
+
+        <label for="email">Correo electrónico:</label> 
+        <input type="email" id="email" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$" required> <!-- Valida correo electrónico -->
+
+        <label for="telefono">Número de teléfono:</label>
+        <input type="text" id="telefono" required pattern="[0-9]{9}"> <!-- 9 números -->
+
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label> <!-- Mayor de 18 -->
+        <input type="date" id="fecha_nacimiento" required>
+
+        <label>Intereses:</label>
+        <input type="checkbox" name="intereses" id="interes1" value="opcion1">Opción 1
+        <input type="checkbox" name="intereses" id="interes2" value="opcion2">Opción 2
+        <input type="checkbox" name="intereses" id="interes3" value="opcion3">Opción 3
+        <input type="checkbox" name="intereses" id="interes4" value="opcion4">Opción 4
+        <input type="checkbox" name="intereses" id="interes5" value="opcion5">Opción 5
+        
+        <br><label for="fotoPerfil">Foto de perfil:</label>
+        <input type="file"  name="fotoPerfil" id="fotoPerfil" required>
+        <!-- <img id="mostrarImagen" src="" alt=""> -->
+        <div id="mostrarImagen"></div>
+
+        
+        <input type="submit" id="envio" value="Crear cuenta">
+
+        <section id="mensajeExito" style="display:none;color:green;font-size: large;">
+          <div>
+            ¡¡Cuenta creada con éxito!!
+          </div>
+        </section>
+      </form><br><br>
+
+      <!-- Patrones
+La potencia de las expresiones regulares es que podemos usar patrones para 
+construir la expresión. Los más comunes son:
+• [..] (corchetes): dentro se ponen varios caracteres o un rango y permiten 
+comprobar si el carácter de esa posición de la cadena coincide con 
+alguno de ellos. Ejemplos:
+o [abc]: cualquier carácter de los indicados (‘a’ o ‘b’ o ‘c’)
+o [^abc]: cualquiera excepto los indicados
+o [a-z]: cualquier minúscula (el carácter ‘-‘ indica el rango entre ‘a’ y 
+‘z’, incluidas)
+o [a-zA-Z]: cualquier letra
+• ( | ) (pipe): debe coincidir con una de las opciones indicadas:
+o (x|y): la letra x o la y (sería equivalente a [xy]
+o (http|https): cualquiera de las 2 palabras
+• Metacaracteres:
+o . (punto): un único carácter, sea el que sea
+o \d: un dígito (\D: cualquier cosa menos dígito)
+o \s: espacio en blanco (\S: lo opuesto)
+o \w: una palabra o carácter alfanumérico (\W lo contrario)
+o \b: delimitador de palabra (espacio, ppio, fin)
+o \n: nueva línea
+• Cuantificadores:
+o +: al menos 1 vez (ej. [0-9]+ al menos un dígito)
+o *: 0 o más veces
+o ?: 0 o 1 vez
+o {n}: n caracteres (ej. [0-9]{5} = 5 dígitos)
+o {n,}: n o más caracteres
+o {n,m}: entre n y m caracteres
+o ^: al ppio de la cadena (ej.: ^[a-zA-Z] = empieza por letra)
+o $: al final de la cadena (ej.: [0-9]$ = que acabe en dígito)
+• Modificadores:
+o /i: que no distinga entre Maysc y minsc (Ej. /html/i = buscará 
+html, Html, HTML, …)
+o /g: búsqueda global, busca todas las coincidencias y no sólo la 
+primera
+o /m: busca en más de 1 línea (para cadenas con saltos de línea) 
+
+Con Title puedes personalizar el mensaje y con setCustomValidity
+
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("¡Se esperaba una dirección de correo electrónico!");
+  }
+-->
+
+
+     
+</body>
+</html>
